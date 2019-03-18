@@ -1,7 +1,16 @@
+
+//colour CSS variable 
+:root{
+    --color-white:#fff;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: sans-serif;
+}
+
+body {
     margin: 0;
     padding: 0;
 }
