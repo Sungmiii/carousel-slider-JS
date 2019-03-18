@@ -5,7 +5,7 @@ const carousel = function () {
     const imgCaption = document.getElementById('slider__caption');
     const nav = document.getElementById('slider__navigation');
     let active;
-    let timing = 9000;
+    let timing = 9000; // for looping
 
     function set_active_nav(element) {
         if (active) active.id = "";
@@ -56,12 +56,28 @@ const carousel = function () {
             // slider.onclick = function () {
             //     console.log('img click')
             // }
+            document.querySelector('#slider__btn-next').onclick = function () {
+                display_slide(set_next_index());
+            }
+            document.querySelector('#slider__btn-pre').onclick = function () {
+                display_slide(set_pre_index());
+            }
+
+            function set_pre_index() {
+                let current_index = active.getAttribute('data-index')
+                if (current_index == 0) {
+                    current_index = imgarr.length - 1;
+                } else {
+                    current_index--;
+                }
+                return current_index;
+            }
         }
         //looping
-        setInterval(() => {
+        /* setInterval(() => {
             let current_index = set_next_index();
             display_slide(current_index);
-        }, timing);
+        }, timing); */
     }
     return {
         make_carousel: make_carousel
