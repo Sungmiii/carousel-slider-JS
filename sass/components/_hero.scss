@@ -68,8 +68,9 @@
     display: flex;
     flex-direction: row;
     transition: all .5s linear !important;
+    height: 75vh;
     &-photo {
-        height: 100%;
+        // height: 100%;
         cursor: pointer;
         cursor: hand;
     }
