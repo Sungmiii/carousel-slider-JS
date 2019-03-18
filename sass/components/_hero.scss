@@ -1,5 +1,75 @@
-#slider__hero{
-    &-photo {
+#slider {
+    overflow: hidden;
+    position: relative;
+    &:hover .slider__control {
+        display: block;
+    }
+    &__caption {
+        background: 0 0 rgba(0,0,0, .8);
+        border-top: 1px solid #000;
+        bottom:0;
+        color:white;
+        font-size: 1.6rem;
+        height: 5rem;
+        font-weight:700; 
+        position: absolute;
         width: 100%;
+        z-index: 10;
+        padding: 1rem 2rem;
+    }
+    
+    &__btn-pre{
+         left: 0;
+    }
+    &__btn-next{
+        right: 0;
+    }
+    &__navigation {
+        text-align: center;
+    }
+    &__navigation a{
+        cursor: pointer;
+        cursor: hand;
+        font-size: 10rem;
+        color: rgba(10,60,150,.8);
+        text-shadow: 0 .2rem 0 #fff, 0 0 0 #909090;
+        &::before {
+            content:"\00ba";
+        }
+        &#active {
+            color: sandybrown;
+        }
+       
+    }
+}
+.slider__control {
+    background-color: rgba(0,0,0, .8);
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+    opacity: .7;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    text-shadow: 0 .1rem #999;
+    z-index: 20;
+    position: absolute;
+    top:50%;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+    
+    //display none until user clicks the img
+    display: none;
+}
+
+#slider__hero{
+    display: flex;
+    flex-direction: row;
+    transition: all .2s .3s linear;
+    &-photo {
+        height: 100%;
+        cursor: pointer;
+        cursor: hand;
     }
 }
