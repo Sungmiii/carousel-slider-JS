@@ -2,7 +2,6 @@ const carousel = function () {
     const slider = document.getElementById('slider');
     const slider_hero = document.getElementById('slider__hero');
     const imgarr = slider_hero.getElementsByTagName('div');
-    // const imgCaption = document.getElementById('slider__caption');
     const nav = document.getElementById('slider__navigation');
     let active;
     let timing = 9000; // for looping
@@ -36,11 +35,9 @@ const carousel = function () {
             slider_hero.style.width = 100 * imgLength + '%';
 
             for (let i = 0; i < imgLength; i++) {
-                // imgarr[i].style.width = 100 / imgLength + "%";
                 const link = document.createElement("a");
                 link.setAttribute('data-index', i);
                 if (i === 0) {
-                    // imgCaption.innerHTML = imgarr[i].title
                     set_active_nav(link)
                 }
                 //click function 
