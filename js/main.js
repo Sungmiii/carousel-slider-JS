@@ -20,7 +20,6 @@ const carousel = function () {
     }
 
     function set_active_img(index) {
-        // imgCaption.innerHTML = imgarr[index].title;
         slider_hero.style.marginLeft = "-" + index + "00%";
     }
 
@@ -48,6 +47,7 @@ const carousel = function () {
                 }
                 //navigation
                 nav.appendChild(link);
+                //addEventListener function
             }
             //checking it's working
             // slider.onclick = function () {
@@ -70,11 +70,6 @@ const carousel = function () {
                 return current_index;
             }
         }
-        //looping
-        /* setInterval(() => {
-            let current_index = set_next_index();
-            display_slide(current_index);
-        }, timing); */
     }
     return {
         make_carousel: make_carousel
